@@ -488,7 +488,7 @@ footer p {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background: url(../img/arrow-up.png) no-repeat center 50%;
+  background: url("https://static.thenounproject.com/png/765561-200.png") no-repeat center 50%;
   background-size:cover;
   visibility: hidden;
   opacity: 0;
