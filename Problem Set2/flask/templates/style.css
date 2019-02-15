@@ -335,9 +335,9 @@ a:hover,a:focus {
 /* Thumbnail Images*/
 
 .photo-1 {background-image: url('https://images.pexels.com/photos/1830937/pexels-photo-1830937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');}
-.photo-2 {background-image: url('../img/2.jpg');}
-.photo-3 {background-image: url('../img/3.jpg');}
-.photo-4 {background-image: url('../img/4.jpg');}
+.photo-2 {background-image: url('2.jpg');}
+.photo-3 {background-image: url('3.jpg');}
+.photo-4 {background-image: url('4.jpg');}
 
 
 /* Modal Box */
