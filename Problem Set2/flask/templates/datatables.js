@@ -21,17 +21,17 @@ $("button#get_data").click(function() {
                     retrieve: true,
                     ordering: true,
                     columns: [
-                        { title: "score",
+                        { title: "评分",
                           defaultContent:""},
-                        { title: "name",
+                        { title: "书名",
                               defaultContent:""},
-                        { title: "url",
+                        { title: "链接",
                           defaultContent:""},
-                        { title: "info",
+                        { title: "信息",
                             defaultContent:""},
-                        { title: "rater",
+                        { title: "人数",
                           defaultContent:""},
-                        { title: "channel",
+                        { title: "购买",
                             defaultContent:""},
                     ] // rmf columns
                 } );
@@ -62,13 +62,13 @@ $(document).ready(function(){
            retrive:true,
            destroy:true,
            columns: [
-                   { title: "title",
+                   { title: "帖子",
                      defaultContent:""},
-                   { title: "link",
+                   { title: "链接",
                        defaultContent:"" },
-                   { title: "visitor",
+                   { title: "访问量",
                      defaultContent:"" },
-                   { title: "excerpt",
+                   { title: "摘要",
                      defaultContent:""},
 
                   ]
