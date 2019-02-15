@@ -93,26 +93,8 @@
 	</section>
 
     <div class='container'>
-    <table id="myTable"  style="margin:10px;" class="table table-bordered" >
-    <thead>
-      <tr>
-        <th>标题  </th>
-        <th>链接 </th>
-        <th>访客 </th>
-        <th>摘要 </th>
-      </tr>
-    </thead>
-    <tbody>
-       {% for row in  entries  %}
-          <tr>
-            <td>{{ row["title"] }}</td>
-            <td>{{ row["link"] }}</td>
-            <td>{{ row["visitor"] }}</td>
-            <td>{{ row["excerpt"] }}</td>
-          </tr>
-        {% endfor %}
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table id="table2" width="100%" class="table table-bordered"></table>
 </div><!--end container-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -160,5 +142,7 @@
 		</div>
 	</footer>
 
+
+    <script src="datatables.js"></script>
 </body>
 </html>

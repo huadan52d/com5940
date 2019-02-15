@@ -37,3 +37,41 @@ $("button#get_data").click(function() {
                 } );
       }); // end .getJSON
        });
+
+$(document).ready(function(){
+
+
+    var table2_items = [];
+    var i = 0;
+    var airtable_data = "https://api.airtable.com/v0/appURqPIQIxvuVI8v/Imported%20table?api_key=keyV24tV2nJhgN75C&sortField=visitor&sortDirection=asc&view=Grid%20view"
+    var table2_dataSet = [];
+
+    $.getJSON(airtable_data,function(result){
+      $.each(result.records,function(key,value){
+         table2_items = [];
+       table2_items.push(value.fields.title);
+       table2_items.push(value.fields.link);
+       table2_items.push(value.fields.visitor);
+       table2_items.push(value.fields.excerpt);
+         table2_dataSet.push(table2_items);
+         console.log(table2_items);
+      });
+         console.log(table2_dataSet);
+         $("#table2").DataTable({
+           data:table2_dataSet,
+           retrive:true,
+           destroy:true,
+           columns: [
+                   { title: "title",
+                     defaultContent:""},
+                   { title: "link",
+                       defaultContent:"" },
+                   { title: "visitor",
+                     defaultContent:"" },
+                   { title: "excerpt",
+                     defaultContent:""},
+
+                  ]
+         });
+    });
+  });
