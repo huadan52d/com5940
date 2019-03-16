@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://banner2.kisspng.com/20180326/bsq/kisspng-instant-camera-drawing-photography-polaroid-5ab90cde2f37d8.7223335015220768941934.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <title>拍立得创意广告</title>
+    <!-- Css -->
+    <link href="http://huadan52d666.pythonanywhere.com/static/css/bootstrap.css" rel="stylesheet">
+	<link href="http://huadan52d666.pythonanywhere.com/static/css/style.css" rel="stylesheet">
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<div class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+					<span class="bar1"></span>
+					<span class="bar2"></span>
+					<span class="bar3"></span>
+			  </div>
+				<a class="navbar-brand top" href="#">
+					<img src="https://instax.com/wp-content/themes/instax/img/common/share.png">
+				</a>
+
+			</div>
+
+			<div class="collapse navbar-collapse" id="main-menu">
+			   <ul class="nav navbar-nav navbar-right">
+				<li><a href="http://huadan52d666.pythonanywhere.com/#about">小诗</a></li>
+				<li><a href="http://huadan52d666.pythonanywhere.com/#portfolio">故事 </a></li>
+				<li><a href="http://huadan52d666.pythonanywhere.com/#press">创意作品</a></li>
+				<li><a href="http://huadan52d666.pythonanywhere.com/#book">书籍</a></li>
+				<li><a href="http://huadan52d666.pythonanywhere.com/appendix.html">帖子</a></li>
+				<li><a href="http://huadan52d666.pythonanywhere.com/wp-chart.html">用户</a></li>
+				<li><a href="http://huadan52d666.pythonanywhere.com/map.html">取景地</a></li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+    <!-- Intro -->
+
+	<section class="intro">
+		<div class="container">
+			<div class="row">
+			<a class="navbar-brand top" href="#"><img src="https://www.fujifilm.ca/products/instax/cameras/mini_8/images/img-grab-your-fave-colour.png" alt=""></a>
+            <h1>广告拍摄取景地</h1>
+			</div>
+		</div>
+    </section>
+
+ <div id='map'>
+<style>
+#map { position:absolute; padding-top:4%; width:100%;height:80%;}
+</style>
+<style>
+.mapboxgl-popup {
+max-width: 200px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+</style>
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiaHVhZGFuNTJkIiwiYSI6ImNqcGI3Nnh4cTBibmkzcW92azA2ZnNycHoifQ.i_sWr_kbVuvjkzZtR1lhkA';
+
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v9',
+center: [114.184106, 22.344646],
+zoom: 11
+});
+
+map.on('load', function () {
+// Add a layer showing the places.
+map.addLayer({
+"id": "places",
+"type": "symbol",
+"source": {
+"type": "geojson",
+"data": {
+"type": "FeatureCollection",
+"features": [{
+"type": "Feature",
+"properties": {
+"description": "<center><strong>大围站 </strong><p><img src=\"https://youimg1.c-ctrip.com/target/100l0q000000gdj7179B4.jpg\"style=\"width:50%;height:50%\"></img><br><br>火车站的拍摄地 </p></center>",
+"icon": "attraction"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [114.178617,22.372995]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<center><strong>中环码头 </strong><p><img src=\"https://a.bbkz.net/forum/spot/photos/40/photo_5343.jpg?v=1417588158\" style=\"width:50%;height:50%\"></img><br><br>摩天轮取景地 </p></center>",
+"icon": "attraction"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [114.161253,22.287843]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<center><strong>皇后大道中 </strong><p><img src=\"https://hk.ulifestyle.com.hk/cms/images/spot/1024/201512/20160330181355_2_ad.jpg\" style=\"width:50%;height:50%\"></img><br><br>叮叮车取景地 </p></center>",
+"icon": "attraction"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [114.155676, 22.283031]
+}
+}, {
+    "type": "Feature",
+"properties": {
+"description": "<center><strong>上环嘉咸街涂鸦墙</strong><p><img src=\"https://www.wowlavie.com/file/article_all/A1500441554.png\"style=\"width:50%;height:50%\"></img><br><br>涂鸦取景地之一  </p></center>",
+"icon": "attraction"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [114.152670, 22.283205]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<center><strong>上环卑利街涂鸦墙</strong><p><img src=\"https://youimg1.c-ctrip.com/target/100o0z000000n759lD3C1_R_640_10000_Q90.jpg\"style=\"width:50%;height:50%\"></img><br><br>涂鸦取景地之一 </p><center>",
+"icon": "attraction"
+},
+"geometry": {
+    "type": "Point",
+"coordinates": [114.152436, 22.282332]
+}
+},]
+}
+},
+"layout": {
+"icon-image": "{icon}-15",
+"icon-allow-overlap": true,
+"icon-size":2
+}
+});
+map.on('click', 'places', function (e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+
+new mapboxgl.Popup()
+.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'places', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'places', function () {
+map.getCanvas().style.cursor = '';
+});
+});
+</script>
+
+ <footer>
+		<div class="container">
+			<p class="text-center">© 2018 - Designed by <a href="http://huadan52d666.pythonanywhere.com/">FUJI INSTAX创意广告</a></p>
+		</div>
+	</footer>
+   <a href="page-top" class="cd-top cd-is-visible cd-fade-out">Top</a>
+    <script src="http://huadan52d666.pythonanywhere.com/static/js/script.js"></script>
+</body>
+</html>
